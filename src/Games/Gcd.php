@@ -27,7 +27,7 @@ function run(): void
     runGame(DESCRIPTION, $gameData);
 }
 
-function findGcd($first, $second)
+function findGcd(int $first, int $second): int
 {
     $result = 0;
     $maxDivisor = min($first, $second);

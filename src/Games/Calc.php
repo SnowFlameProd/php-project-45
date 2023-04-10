@@ -29,22 +29,22 @@ function run(): void
     runGame(DESCRIPTION, $gameData);
 }
 
-function sum($first, $second)
+function sum(int $first, int $second): int
 {
     return $first + $second;
 }
 
-function sub($first, $second)
+function sub(int $first, int $second): int
 {
     return $first - $second;
 }
 
-function mult($first, $second)
+function mult(int $first, int $second): int
 {
     return $first * $second;
 }
 
-function getCorrectAnswer($operation, $first, $second)
+function getCorrectAnswer(string $operation, int $first, int $second): int
 {
     $correctAnswer = 0;
 
