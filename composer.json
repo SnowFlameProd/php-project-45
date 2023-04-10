@@ -1,0 +1,29 @@
+{
+    "name": "hexlet/code",
+    "description": "Brain Games App",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Hexlet\\Code\\": "src/"
+        },
+        "files": [
+            "src/Cli.php"
+        ]
+    },
+    "authors": [
+        {
+            "name": "snowflame",
+            "email": "e.lepikhov@lms-service.ru"
+        }
+    ],
+    "require": {
+        "wp-cli/php-cli-tools": "^0.11.17"
+    },
+    "require-dev": {
+        "squizlabs/php_codesniffer": "^3.7"
+    },
+    "bin": [
+        "bin/brain-games"
+    ],
+    "license": "MIT"
+}
