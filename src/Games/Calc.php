@@ -22,7 +22,7 @@ function run(): void
         $currentOperation = $operations[array_rand($operations)];
         $question = "{$first} {$currentOperation} {$second}";
         $correctAnswer = getCorrectAnswer($currentOperation, $first, $second);
-        $gameData[] = [$question, (string) $correctAnswer];
+        $gameData[] = [$question, $correctAnswer];
         $i++;
     }
 
@@ -44,7 +44,8 @@ function mult($first, $second)
     return $first * $second;
 }
 
-function getCorrectAnswer($operation, $first, $second) {
+function getCorrectAnswer($operation, $first, $second)
+{
     $correctAnswer = 0;
 
     switch ($operation) {

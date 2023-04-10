@@ -7,6 +7,12 @@ use function cli\prompt;
 
 const ROUND_COUNT = 3;
 
+/**
+ * Функция, которая запускает игру
+ * @param string $description - условия игры
+ * @param array $gameData - массив с вопросом и правильным ответом
+ * @return void
+ */
 function runGame(string $description, array $gameData): void
 {
     line('Welcome to the Brain Games!');
@@ -18,7 +24,7 @@ function runGame(string $description, array $gameData): void
         line("Question: " . $question);
         $answer = prompt("Your answer");
 
-        if ($answer === $correctAnswer) {
+        if ($answer === (string) $correctAnswer) {
             line("Correct!");
         } else {
             line("'%s' is wrong answer ;(. Correct answer was '%s'", $answer, $correctAnswer);

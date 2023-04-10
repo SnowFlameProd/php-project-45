@@ -11,11 +11,11 @@ const DESCRIPTION = 'Answer "yes" if the number is even, otherwise answer "no".'
 function run(): void
 {
     $gameData = [];
+    $minRange = 1;
+    $maxRange = 100;
     $i = 0;
 
     while ($i < ROUND_COUNT) {
-        $minRange = 1;
-        $maxRange = 100;
         $number = rand($minRange, $maxRange);
         $question = (string) $number;
         $correctAnswer = $number % 2 === 0 ? 'yes' : 'no';
