@@ -32,7 +32,7 @@ function findGcd(int $first, int $second): int
     $result = 0;
     $maxDivisor = min($first, $second);
 
-    for ($j = 1; $j < $maxDivisor; $j++) {
+    for ($j = 1; $j <= $maxDivisor; $j++) {
         if ($first % $j === 0 && $second % $j === 0) {
             $result = $j;
         }
