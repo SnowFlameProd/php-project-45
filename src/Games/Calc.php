@@ -12,18 +12,15 @@ function run(): void
 {
     $gameData = [];
     $i = 0;
-
     while ($i < ROUND_COUNT) {
         $minRange = 1;
         $maxRange = 25;
         $operations = ['+', '-', '*'];
         $correctAnswer = 0;
-
         $first = rand($minRange, $maxRange);
         $second = rand($minRange, $maxRange);
         $currentOperation = array_rand($operations, 1);
         $question = $first . ' ' . $operations[$currentOperation] . ' ' . $second;
-
         switch ($operations[$currentOperation]) {
             case '+':
                 $correctAnswer = sum($first, $second);
@@ -37,7 +34,6 @@ function run(): void
             default:
                 break;
         }
-
         $gameData[] = [$question, (string) $correctAnswer];
         $i++;
     }
